@@ -1,0 +1,30 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "pybind11>=2.9.2",
+    "cmake>=3.23",
+    "ninja",
+    "scikit-build-core>=0.9",
+]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "kisstype"
+version = "1.0.0"
+description = "Python bindings for kisstype, the kiss EIS data type library"
+authors = [{ name = "Carl Philipp Klemm" }]
+license = { text = "MIT" }
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: C++",
+    "Topic :: Scientific/Engineering",
+]
+
+[tool.scikit-build]
+cmake.version = ">=3.23"
+wheel.packages = ["src/kisstype"]
+wheel.install-dir = "kisstype"
+
+[tool.isort]
+profile = "black"

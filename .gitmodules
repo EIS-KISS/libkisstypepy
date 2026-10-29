@@ -1,0 +1,3 @@
+[submodule "kisstype"]
+	path = kisstype
+	url = https://git.uvos.xyz/kiss/kisstype.git
